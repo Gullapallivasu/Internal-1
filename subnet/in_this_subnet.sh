@@ -49,7 +49,9 @@ while read -r Given_Hex_IP Given_CIDR_subnet ; do
     #check if nmap is installed or not ; else install it
     nmap --version >>/dev/null
     if [ $? -ne 0 ]; then
-      sudo apt-get -qq install nmap
+	  echo "nmap is needed for this tool to run..installing it"
+	  echo "If you are not running as root, please enter your sudo passwd once prompted"
+      sudo apt-get --assume-yes --quiet install nmap
     fi
 
   }
