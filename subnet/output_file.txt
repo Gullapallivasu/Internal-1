@@ -1,0 +1,6 @@
+False
+Please enter correct string in Hexadecimal format
+False
+True
+True
+True
